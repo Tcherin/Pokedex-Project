@@ -6,8 +6,9 @@ const Pokemon = ({pokemon}) => {
         <div className='pokemon'>
         <li>{pokemon.name}</li>
         <img src={pokemon.sprites.front_shiny}></img>
+        <li>Type: {pokemon['types'][0]['type']['name']}</li>
             <div className='move'>
-                <li>{pokemon['moves'][0]['move']['name']}</li>
+                Top Moves: <li>{pokemon['moves'][0]['move']['name']}</li>
             </div>
         </div>
 
