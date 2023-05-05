@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import PokedexList from '../components/PokedexList';
+import SearchBar from '../components/SearchBar';
 
 
 const PokedexContainer = () => {
 
     const [pokedex, setPokedex] = useState(null)
+    const [searchedPokemon, setSearchedPokemon] = useState(null)
 
     useEffect(() => {
         getPokedexContents()
@@ -23,12 +25,24 @@ const PokedexContainer = () => {
         
     }
 
-    return ( 
+    const findPokemon = (searchTerm) => {
+        const foundPokemon = [];
+        for (let pokemon of pokedex) {
+            if (pokemon.name.includes(searchTerm)) {
+                foundPokemon.push(pokemon)
+            }
+        }
+        setSearchedPokemon(foundPokemon)
+    }
 
-        <>
-        <h1>PokedexContainer</h1>
-        {pokedex ? <PokedexList pokedex={pokedex}/> : null}
-        </>
+    return ( 
+        <div>
+            <h1>Pokemon Generator</h1>
+            <div className='pokedex-container'>
+            <SearchBar findPokemon={findPokemon}/>
+            {searchedPokemon ? <PokedexList pokedex={searchedPokemon}/> : null}
+            </div>
+        </div>
 
      );
 }

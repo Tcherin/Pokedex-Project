@@ -10,7 +10,7 @@ const PokedexList = ({pokedex}) => {
       })
   
     return (
-      <div>
+      <div className='pokedex-list'>
         <ul>
             {pokedexItems}
         </ul>
