@@ -47,20 +47,25 @@ h1 {
 }
 
 .pokedex-list {
-
+  padding: 5rem;
 }
 
 .pokemon {
 
 border: solid;
-border-radius: 100px;
-border-width: 4px;
+border-radius: 25px;
+border-width: 5px;
 border-color: black;
+margin: 10px;
+position: relative;
+/* border-image: url(https://www.pngkit.com/png/detail/584-5843757_pokemon-dialog-box-pokemon-text-box-png.png) 42 round; */
 list-style: none;
 font-family: pokemon;
-padding: 30px;
+padding: 10px;
 padding-bottom: 10px;
+padding-top: 10px;
 background-color: white;
+height: 10rem;
 
 }
 
