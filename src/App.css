@@ -6,13 +6,24 @@ body {
   text-align: center;
 }
 
+@font-face {
+  font-family: pokemon;
+  src: url(PokemonGb-RAeo.ttf)
+}
+
+@font-face {
+  font-family: pokemon-fill;
+  src: url(Pokemon\ Solid.ttf);
+}
+
 h1 {
   font-size: 5rem;
-  font-family:fantasy;
+  font-family: pokemon-fill;
   display: flex;
   justify-content: flex-end;
   padding-right: 30px;
-  color: rebeccapurple;
+  color: yellow;
+  text-shadow: -6px -6px 0 blue, 6px -6px 0 blue, -6px 6px 0 blue, 6px 6px 0 blue;
 }
 
 .searchbar {
@@ -20,8 +31,10 @@ h1 {
   align-items: flex-end;
   text-align: center;
   border-radius: 50px;
+  border-radius: 10px;
   padding: 20px;
-  width: 40px
+  width: 50px
+
 }
 
 .pokedex-container {
@@ -34,17 +47,23 @@ h1 {
 }
 
 .pokedex-list {
+
 }
 
 .pokemon {
 
 border: solid;
-border-radius: 25px;
-border-width: 8px;
-border-color: yellow;
+border-radius: 100px;
+border-width: 4px;
+border-color: black;
 list-style: none;
+font-family: pokemon;
 padding: 30px;
 padding-bottom: 10px;
-background-color: lightblue;
+background-color: white;
+
+}
+
+.pokemon-image {
 
 }
