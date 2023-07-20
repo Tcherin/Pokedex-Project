@@ -26,21 +26,28 @@ h1 {
   text-shadow: -6px -6px 0 blue, 6px -6px 0 blue, -6px 6px 0 blue, 6px 6px 0 blue;
 }
 
+input {
+  width: 20rem;
+  border-radius: 15px;
+  border: solid;
+  outline: none;
+  border-color: black;
+  font-family: pokemon;
+  text-align: center;
+  height: 3rem;
+}
+
 .searchbar {
   display: flex;
   align-items: flex-end;
   text-align: center;
-  border-radius: 50px;
-  border-radius: 10px;
   padding: 20px;
-  width: 50px
 
 }
 
 .pokedex-container {
 
   padding: 50px;
-  flex-basis: 33.333333%;
   border-radius: 10px;
 
 
@@ -57,18 +64,14 @@ border-radius: 25px;
 border-width: 5px;
 border-color: black;
 margin: 10px;
+margin-right: 50px;
 position: relative;
 /* border-image: url(https://www.pngkit.com/png/detail/584-5843757_pokemon-dialog-box-pokemon-text-box-png.png) 42 round; */
 list-style: none;
 font-family: pokemon;
-padding: 10px;
-padding-bottom: 10px;
-padding-top: 10px;
+padding-bottom: 25px;
+padding-top: 25px;
 background-color: white;
 height: 10rem;
-
-}
-
-.pokemon-image {
 
 }

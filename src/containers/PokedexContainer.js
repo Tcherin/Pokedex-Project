@@ -37,9 +37,11 @@ const PokedexContainer = () => {
 
     return ( 
         <div>
-            <h1>Pokemon Generator</h1>
-            <div className='pokedex-container'>
+            <h1>Build your own Pokedex!</h1>
+            <div className='searchbar'>
             <SearchBar findPokemon={findPokemon}/>
+            </div>
+            <div className='pokedex-container'>
             {searchedPokemon ? <PokedexList pokedex={searchedPokemon}/> : null}
             </div>
         </div>
