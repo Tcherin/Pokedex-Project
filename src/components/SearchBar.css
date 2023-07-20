@@ -1,0 +1,17 @@
+.searchbar {
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  padding: 20px;
+}
+
+input {
+  width: 20rem;
+  border-radius: 15px;
+  border: solid;
+  outline: none;
+  border-color: black;
+  font-family: pokemon;
+  text-align: center;
+  height: 3rem;
+}

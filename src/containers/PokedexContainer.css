@@ -1,0 +1,31 @@
+body {
+  background-image: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700590751.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@font-face {
+  font-family: pokemon;
+  src: url(../Fonts/PokemonGb-RAeo.ttf);
+}
+
+@font-face {
+  font-family: pokemon-fill;
+  src: url(../Fonts/Pokemon\ Solid.ttf);
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: pokemon-fill;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+  color: yellow;
+  text-shadow: -6px -6px 0 blue, 6px -6px 0 blue, -6px 6px 0 blue,
+    6px 6px 0 blue;
+}
+
+.pokedex {
+  padding: 50px;
+}

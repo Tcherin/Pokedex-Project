@@ -1,21 +1,19 @@
-import React from 'react';
-import Pokemon from './Pokemon';
+import React from "react";
+import "./PokedexList.css";
+import PokemonCard from "./PokemonCard";
 
-const PokedexList = ({pokedex}) => {
+const PokedexList = ({ pokedex }) => {
+  console.log(pokedex);
 
-    console.log(pokedex)
-
-    const pokedexItems = pokedex.map((pokemon, index) => {
-        return <Pokemon pokemon={pokemon} key={index}/>
-      })
-  
+  const pokedexItems = pokedex.map((pokemon, index) => {
     return (
-      <div className='pokedex-list'>
-        <ul>
-            {pokedexItems}
-        </ul>
-    </div>
-    )
-}
- 
+      <div>
+        <PokemonCard pokemon={pokemon} key={index} />
+      </div>
+    );
+  });
+
+  return <div className="list-container">{pokedexItems}</div>;
+};
+
 export default PokedexList;

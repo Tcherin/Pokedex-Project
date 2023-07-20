@@ -1,10 +1,10 @@
-import './App.css';
-import PokedexContainer from './containers/PokedexContainer';
+import "./containers/PokedexContainer.css";
+import PokedexContainer from "./containers/PokedexContainer";
 
 function App() {
   return (
     <div className="App">
-      <PokedexContainer/>
+      <PokedexContainer />
     </div>
   );
 }

@@ -1,19 +1,20 @@
-import React from 'react';
+import React from "react";
+import "./SearchBar.css";
 
-const SearchBar = ({findPokemon}) => {
+const SearchBar = ({ findPokemon }) => {
+  const onSearch = (event) => {
+    findPokemon(event.target.value);
+  };
 
-    const onSearch = (event) => {
-            findPokemon(event.target.value)
-    }
+  return (
+    <form className="searchbar">
+      <input
+        name="searchPokemon"
+        placeholder="Search em all!"
+        onChange={onSearch}
+      ></input>
+    </form>
+  );
+};
 
-
-
-    return ( 
-        <form className='searchbar'>
-        <input name="searchPokemon" placeholder='Search em all!' onChange={onSearch}></input>
-        </form>
-
-     );
-}
- 
 export default SearchBar;
