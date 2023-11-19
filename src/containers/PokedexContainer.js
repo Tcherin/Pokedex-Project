@@ -27,6 +27,7 @@ const PokedexContainer = () => {
       return pokemon.name.includes(searchTerm);
     });
     setSearchedPokemon(foundPokemon);
+    console.log(foundPokemon);
   };
 
   return (
@@ -38,9 +39,7 @@ const PokedexContainer = () => {
           searchedPokemon={searchedPokemon}
         />
       </div>
-      {searchedPokemon && searchedPokemon.length > 0 ? (
-        <PokedexList pokedex={searchedPokemon} />
-      ) : null}
+      {searchedPokemon ? <PokedexList pokedex={searchedPokemon} /> : null}
     </div>
   );
 };
