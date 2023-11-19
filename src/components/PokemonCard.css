@@ -1,0 +1,11 @@
+.card {
+  border: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  list-style: none;
+  font-family: pokemon;
+  background-color: white;
+  padding: 2em;
+  margin: 10px;
+  width: 250px;
+}
