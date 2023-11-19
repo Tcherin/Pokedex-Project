@@ -3,17 +3,15 @@ import "./PokedexList.css";
 import PokemonCard from "./PokemonCard";
 
 const PokedexList = ({ pokedex }) => {
-  console.log(pokedex);
-
-  const pokedexItems = pokedex.map((pokemon, index) => {
-    return (
-      <div>
-        <PokemonCard pokemon={pokemon} key={index} />
-      </div>
-    );
-  });
-
-  return <div className="list-container">{pokedexItems}</div>;
+  return (
+    <div className="list-container">
+      {pokedex.map((pokemon, index) => (
+        <div key={index}>
+          <PokemonCard pokemon={pokemon} />
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default PokedexList;

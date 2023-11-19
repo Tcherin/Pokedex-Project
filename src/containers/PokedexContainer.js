@@ -10,25 +10,22 @@ const PokedexContainer = () => {
     getPokedexContents();
   }, []);
 
-  const getPokedexContents = () => {
+  const getPokedexContents = async () => {
     const allRequests = [];
+
     for (let i = 1; i <= 151; i++) {
-      const newFetch = fetch("https://pokeapi.co/api/v2/pokemon/" + i).then(
-        (response) => response.json()
-      );
-      allRequests.push(newFetch);
+      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
+      const data = await response.json();
+      allRequests.push(data);
     }
-    console.log(allRequests);
-    Promise.all(allRequests).then((data) => setPokedex(data));
+
+    setPokedex(allRequests);
   };
 
   const findPokemon = (searchTerm) => {
-    const foundPokemon = [];
-    for (let pokemon of pokedex) {
-      if (pokemon.name.includes(searchTerm)) {
-        foundPokemon.push(pokemon);
-      }
-    }
+    const foundPokemon = pokedex.filter((pokemon) => {
+      return pokemon.name.includes(searchTerm);
+    });
     setSearchedPokemon(foundPokemon);
   };
 
@@ -36,9 +33,14 @@ const PokedexContainer = () => {
     <div className="pokedex">
       <h1>Build your own Pokedex!</h1>
       <div className="searchbar">
-        <SearchBar findPokemon={findPokemon} />
+        <SearchBar
+          findPokemon={findPokemon}
+          searchedPokemon={searchedPokemon}
+        />
       </div>
-      {searchedPokemon ? <PokedexList pokedex={searchedPokemon} /> : null}
+      {searchedPokemon && searchedPokemon.length > 0 ? (
+        <PokedexList pokedex={searchedPokemon} />
+      ) : null}
     </div>
   );
 };

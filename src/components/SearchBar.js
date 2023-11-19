@@ -1,7 +1,7 @@
 import React from "react";
 import "./SearchBar.css";
 
-const SearchBar = ({ findPokemon }) => {
+const SearchBar = ({ findPokemon, searchedPokemon }) => {
   const onSearch = (event) => {
     findPokemon(event.target.value);
   };
