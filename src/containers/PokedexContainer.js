@@ -51,10 +51,12 @@ const PokedexContainer = () => {
           />
         </div>
         <div className="type-selector">
-          <TypeSelector />
-        </div>
-        <div>
-          <EvolutionSelector />
+          <div>
+            <TypeSelector />
+          </div>
+          <div>
+            <EvolutionSelector />
+          </div>
         </div>
       </div>
       <div>
