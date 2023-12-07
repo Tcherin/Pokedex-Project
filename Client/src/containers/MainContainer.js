@@ -10,8 +10,8 @@ const MainContainer = () => {
       <NavBar />
       <div>
         <Routes>
-          <Route path="/" element={PokedexContainer} />
-          <Route path="/trainers" element={TrainerContainer} />
+          <Route path="/" element={<PokedexContainer />} />
+          <Route path="/trainers" element={<TrainerContainer />} />
         </Routes>
       </div>
     </Router>
