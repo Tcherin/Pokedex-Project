@@ -11,7 +11,9 @@ const SearchBar = ({ findPokemon }) => {
   return (
     <form className="searchbar" onSubmit={onSearch}>
       <input name="searchPokemon" placeholder="Search em all!"></input>
-      <button type="submit">Search</button>
+      <button className="search-button" type="submit">
+        Search
+      </button>
     </form>
   );
 };

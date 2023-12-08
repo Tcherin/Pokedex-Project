@@ -51,6 +51,7 @@ const Pokemon = ({ pokemon }) => {
             <div>OT/MET</div>
           </div>
         </section>
+        <button className="button">Add</button>
       </div>
     </div>
   );

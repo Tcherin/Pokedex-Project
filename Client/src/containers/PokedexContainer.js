@@ -62,39 +62,39 @@ const PokedexContainer = () => {
   // };
 
   return (
-    <div className="pokedex">
+    <div>
       <h1>Build your own Pokedex!</h1>
-      <div className="criteria-selectors">
-        <div className="searchbar">
-          <SearchBar
-            findPokemon={findPokemon}
-            searchedPokemon={searchedPokemon}
-          />
-        </div>
-        <div className="type-selector">
-          <div>
-            <TypeSelector
-              findPokemon={findPokemon}
-              types={types}
-              setTypes={setTypes}
-              selectedType={selectedType}
-              setSelectedType={setSelectedType}
-            />
-          </div>
-          <div>
-            <EvolutionSelector />
-          </div>
-        </div>
-      </div>
-      <div>
+      <div className="pokedex-content">
         {isLoading ? (
-          <p>Loading...</p>
+          <p className="loader">Loading...</p>
         ) : error ? (
-          <p>Error: {error.message}</p>
+          <p className="error-message">Error: {error.message}</p>
         ) : (
-          <>
+          <div className="pokedex">
+            <div className="criteria-selectors">
+              <div className="searchbar">
+                <SearchBar
+                  findPokemon={findPokemon}
+                  searchedPokemon={searchedPokemon}
+                />
+              </div>
+              <div className="type-selector">
+                <div>
+                  <TypeSelector
+                    findPokemon={findPokemon}
+                    types={types}
+                    setTypes={setTypes}
+                    selectedType={selectedType}
+                    setSelectedType={setSelectedType}
+                  />
+                </div>
+                <div>
+                  <EvolutionSelector />
+                </div>
+              </div>
+            </div>
             {searchedPokemon ? <PokedexList pokedex={searchedPokemon} /> : null}
-          </>
+          </div>
         )}
       </div>
     </div>

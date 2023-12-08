@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  text-decoration: none;
+  gap: 2rem;
+  margin: 1.5rem;
+  font-family: pokemon;
+  font-size: 0.75rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 7px;
+  background-color: white;
+}
